@@ -1,5 +1,5 @@
 appName: bae-career-ui
-imageName: ymandrews/bae-career-ui:0.1.0
+imageName: ymandrews/bae-careers-ui:0.1.0
 replicas: 1
 serviceName: bae-career-ui-svc
 targetPort: 3000
