@@ -1,0 +1,136 @@
+{
+    "_embedded": {
+        "jobs": [
+            {
+                "code": "93640BR",
+                "title": "Linux Engineer - Flex Hours - AWS",
+                "description": "The Systems Engineer will design and develop solutions to complex infrastructure problems, system administration issues or network concerns. The Systems Engineer will work with legacy virtual machine technology and transition their Team to an AWS cloud solution where technologically possible and financially feasible. They will perform system management and integration functions. The Systems Engineer will analyze Customer and User requirements, procedures and problems to automate or improve existing systems and review computing capabilities, workflows and scheduling limitations. They will incorporate engineering strategies for introducing Infrastructure As Code methodologies and migration of applications to native AWS services to include new technologies for the Government's infrastructure-related business processes.",
+                "salary": 182000,
+                "mode": "REMOTE",
+                "location": "Rome",
+                "level": "Experienced",
+                "_links": {
+                    "self": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/2"
+                    },
+                    "job": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/2"
+                    }
+                }
+            },
+            {
+                "code": "93650BR",
+                "title": "DevOps Engineer - Senior",
+                "description": "We are looking for an experienced DevOps Engineer to join our team! This position is part of a talented technical team responsible for the ongoing development, operations and maintenance of a variety of client applications running primarily on Linux. It also entails the engineering and maintenance of Enterprise DevSecOps systems used within the organization. The ideal candidate must be a self-starter with strong work habits and is able to complete tasks independently while working as part of a team. Experience should include developing, designing and rolling out new systems, maintaining, upgrading, replacing, and improving the long-term performance of the systems",
+                "salary": 150000,
+                "mode": "ONSITE",
+                "location": "Durham",
+                "level": "Experienced",
+                "_links": {
+                    "self": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/1"
+                    },
+                    "job": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/1"
+                    }
+                }
+            },
+            {
+                "code": "23420SX",
+                "title": "Python Programmer - Mid Level",
+                "description": "The python programmer will be developing, testing and deploying a variety of our machine learning projects deployed in kubernetes. The desirable skills are: Flask, npm, yarn, SQL, CI/CD",
+                "salary": 102000,
+                "mode": "REMOTE",
+                "location": "Rome",
+                "level": "Middle",
+                "_links": {
+                    "self": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/6"
+                    },
+                    "job": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/6"
+                    }
+                }
+            },
+            {
+                "code": "45667DX",
+                "title": "Java Engineer - Entry Level",
+                "description": "We are looking for an entry leve Java programmer, who is familiar with the following technologies: Camel, Karaf, Solr, Swagger, REST web service, OOP. Other skills such as unit and integration tests are highly desirable.",
+                "salary": 80000,
+                "mode": "ONSITE",
+                "location": "Durham",
+                "level": "Entry",
+                "_links": {
+                    "self": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/5"
+                    },
+                    "job": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/5"
+                    }
+                }
+            },
+            {
+                "code": "94292BR",
+                "title": "Network Engineer ( Senior)",
+                "description": "We are looking for experienced Network Engineers to join our technology-based program supporting a key government customer. This program will deliver engineering services for network infrastructure as well as sophisticated enterprise computing infrastructure including end-point devices, data center hosted servers, multi-Cloud services as well as virtualized applications, and storage systems.",
+                "salary": 135000,
+                "mode": "ONSITE",
+                "location": "SanDiego",
+                "level": "Experienced",
+                "_links": {
+                    "self": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/8"
+                    },
+                    "job": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/8"
+                    }
+                }
+            },
+            {
+                "code": "23420SD",
+                "title": "Software Engineer (Java Full Stack Developer)",
+                "description": "We are looking for a dynamic Software Engineer that is eager to drive innovation in one of the most groundbreaking Commerce platforms in the market, and will be responsible for the following: Integrate: Work with other engineering teams to integrate APIs with their business process; Expert engineer with deep experience in building scalable and secure commerce systems, especially SaaS business models; Solid understanding of Quote to Order processes and technology platforms for SaaS businesses; Strong working knowledge of Java / Rest implementations / MongoDB / SQL / Angular JS / Elastic Search; Worked on the CI/CD platforms, Jenkins knowledge is preferred; Good Understanding of the monitoring platforms - AppDynamics / Splunk.",
+                "salary": 128000,
+                "mode": "REMOTE",
+                "location": "Rome",
+                "level": "Middle",
+                "_links": {
+                    "self": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/4"
+                    },
+                    "job": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/4"
+                    }
+                }
+            },
+            {
+                "code": "45667DR",
+                "title": "Full Stack Developer - Sign On Bonus",
+                "description": "We are seeking a Secret cleared Full Stack Developer to support a client in Ft Bragg, NC Description: Fast learning and fast thinking software engineer/data engineer that will work in a cross functional team. The team works in a fast paced environment to prototype and solve high profile problems in the Defense Sector Required skills: JavaScript, JavaScript D3JS, HTML5, Web front-end development (HTML/CAA/JS), Python, MS Azure SQL, Microsoft Azure Clearance: Secret Clearance or above Location/Travel: Raleigh/Fayetteville area is required with ability to be on site at Ft. Bragg 50-100% of the time",
+                "salary": 120000,
+                "mode": "ONSITE",
+                "location": "Durham",
+                "level": "Middle",
+                "_links": {
+                    "self": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/3"
+                    },
+                    "job": {
+                        "href": "http://api.careers.baesystems.com:30003/jobs/3"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://api.careers.baesystems.com:30003/jobs"
+        },
+        "profile": {
+            "href": "http://api.careers.baesystems.com:30003/profile/jobs"
+        },
+        "search": {
+            "href": "http://api.careers.baesystems.com:30003/jobs/search"
+        }
+    }
+}
