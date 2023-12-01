@@ -8,6 +8,22 @@ function App() {
   let [sortBy, setSortBy] = useState("title");
   let [orderBy, setOrderBy] = useState('asc');
 
+  const filteredJobList = jobList.filter(
+    job => {
+      return (
+        job.title.toLowerCase().includes(query.toLowerCase()) ||
+        job.description.toLowerCase().includes(query.toLowerCase())
+      );
+    }
+  ).sort(
+    (a, b) => {
+      let order = (orderBy === 'asc') ? 1 : -1;
+      return (
+        a[sortBy] < b[sortBy] ? -1 * order : 1 * order
+      );
+    }
+  );
+
   const fetchData = useCallback(
     () => {
       fetch('./data.json')
@@ -33,7 +49,7 @@ function App() {
         onOrderByChange={myOrder => setOrderBy(myOrder)}  
       />
       <ul className="divide-y divide-gray-200">
-        {jobList
+        {filteredJobList
           .map(job => (
             <JobInfo key={job.id} job={job}/>
           ))

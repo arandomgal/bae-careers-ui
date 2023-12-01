@@ -8,7 +8,7 @@ const JobInfo = ({ job }) => {
                 </div>
                 <div><b className="font-bold text-gray-600">Location:</b> {job.location}</div>
                 <div><b className="font-bold text-gray-600">Level:</b> {job.level}</div>
-                <div><b className="font-bold text-gray-600">Type:</b> {job.mode}</div>
+                <div><b className="font-bold text-gray-600">Mode:</b> {job.mode}</div>
                 <div><b className="font-bold text-gray-600">Starting Salary:</b> ${job.salary}</div>
                 <div className="leading-tight mt-2">{job.description}</div>
             </div>
