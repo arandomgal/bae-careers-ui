@@ -1,8 +1,12 @@
 import { useState, useEffect, useCallback } from "react";
 import JobInfo from "./components/JobInfo";
+import Search from "./components/Search";
 
 function App() {
   let [jobList, setJobList] = useState([]);
+  let [query, setQuery] = useState("");
+  let [sortBy, setSortBy] = useState("title");
+  let [orderBy, setOrderBy] = useState('asc');
 
   const fetchData = useCallback(
     () => {
@@ -21,7 +25,13 @@ function App() {
     </div>
 
     <div className="ml-10 mr-10 mt-10">
-      <hr />
+      <Search query={query}
+        onQueryChange={myQuery => setQuery(myQuery)}
+        sortBy={sortBy}
+        onSortByChange={mySort => setSortBy(mySort)}
+        orderBy={orderBy}
+        onOrderByChange={myOrder => setOrderBy(myOrder)}  
+      />
       <ul className="divide-y divide-gray-200">
         {jobList
           .map(job => (
