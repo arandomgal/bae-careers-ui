@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{.Values.appName}}
+  name: {{.Values.appName}}
+spec:
+  replicas: {{.Values.replicas}}
+  selector:
+    matchLabels:
+      app: {{.Values.appName}}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.appName}}
+    spec:
+      containers:
+        - image: {{.Values.imageName}}
+          name: {{.Values.appName}}
+          command: ["/bin/sh", "-c", "export REACT_APP_CAREERS_REST_API_URL='$(CAREERS_REST_API_URL)';echo $REACT_APP_CAREERS_REST_API_URL;npm start"]
+          env:
+            - name: CAREERS_REST_API_URL
+              value: "{{.Values.careersRestApiUrl}}"
+          ports:
+            - containerPort: {{.Values.targetPort}}

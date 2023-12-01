@@ -1,0 +1,10 @@
+appName: bae-career-ui
+imageName: ymandrews/bae-career-ui:0.1.0
+replicas: 1
+serviceName: bae-career-ui-svc
+targetPort: 3000
+sourcePort: 3000
+nodePort: 32760
+appVersion: 0.1.0
+careersRestApiUrl: http://10.104.155.141:30003/jobs
+

@@ -3,6 +3,11 @@ import JobInfo from "./components/JobInfo";
 import Search from "./components/Search";
 
 function App() {
+  let apiUrl = process.env.REACT_APP_CAREERS_REST_API_URL;
+  console.log('before if statement, apiUrl=', apiUrl);
+  if (!apiUrl) apiUrl= "./data.json";
+  console.log('after if statement, apiUrl=', apiUrl);
+
   let [jobList, setJobList] = useState([]);
   let [query, setQuery] = useState("");
   let [sortBy, setSortBy] = useState("title");
@@ -26,7 +31,7 @@ function App() {
 
   const fetchData = useCallback(
     () => {
-      fetch('http://api.careers.baesystems.com:30003/jobs')
+      fetch(apiUrl)
         .then(response => response.json())
         .then(data => { setJobList(data._embedded.jobs) });
     }, []
