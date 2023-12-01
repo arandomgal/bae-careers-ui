@@ -26,7 +26,7 @@ function App() {
 
   const fetchData = useCallback(
     () => {
-      fetch('./data.json')
+      fetch('http://api.careers.baesystems.com:30003/jobs')
         .then(response => response.json())
         .then(data => { setJobList(data._embedded.jobs) });
     }, []
@@ -38,6 +38,10 @@ function App() {
     <>
     <div className="flex justify-center items-center pt-12">
       <img src="./logo.png" alt="BAE logo" />
+    </div>
+
+    <div className="flex justify-center items-center pt-12">
+    {filteredJobList.length} job(s) found
     </div>
 
     <div className="ml-10 mr-10 mt-10">
