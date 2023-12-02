@@ -4,16 +4,18 @@ import Search from "./components/Search";
 
 function App() {
   let apiUrl = process.env.REACT_APP_CAREERS_REST_API_URL;
-  console.log('before if statement, apiUrl=', apiUrl);
-  if (!apiUrl) apiUrl= "./data.json";
-  console.log('after if statement, apiUrl=', apiUrl);
-  // apiUrl = './data.json';
-  apiUrl = 'http://10.104.155.141:8080/jobs';
+  console.log('From environment variable REACT_APP_CAREERS_REST_API_URL, apiUrl=', apiUrl);
+  if (!apiUrl) {
+    apiUrl = 'http://api.careers.baesystems.com:30003/jobs';
+    console.log('No environmnent variable specified, use default apiUrl=', apiUrl);
+  }
 
   let [jobList, setJobList] = useState([]);
   let [query, setQuery] = useState("");
   let [sortBy, setSortBy] = useState("title");
   let [orderBy, setOrderBy] = useState('asc');
+  let [pageError, setPageError] = useState(null);
+  let [pageLoading, setPageLoading] = useState(null);
 
   const filteredJobList = jobList.filter(
     job => {
@@ -33,13 +35,20 @@ function App() {
 
   const fetchData = useCallback(
     () => {
+      setPageLoading(true);
       fetch(apiUrl)
         .then(response => response.json())
-        .then(data => { setJobList(data._embedded.jobs) });
-    }, []
+        .then(data => { setJobList(data._embedded.jobs) })
+        .then(() => setPageLoading(false))
+        .catch(fetchError => setPageError(fetchError));
+    }, [apiUrl]
   );
 
   useEffect(() => { fetchData() }, [fetchData]);
+
+  if (pageLoading) return (<h1>Loading...</h1>);
+  if (pageError) return (<pre>{JSON.stringify(pageError)}</pre>);
+  if (!jobList) return null;
 
   return (
     <>
