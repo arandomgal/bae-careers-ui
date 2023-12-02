@@ -7,7 +7,8 @@ function App() {
   console.log('before if statement, apiUrl=', apiUrl);
   if (!apiUrl) apiUrl= "./data.json";
   console.log('after if statement, apiUrl=', apiUrl);
-  apiUrl = './data.json';
+  // apiUrl = './data.json';
+  apiUrl = 'http://10.104.155.141:8080/jobs';
 
   let [jobList, setJobList] = useState([]);
   let [query, setQuery] = useState("");
